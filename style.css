@@ -113,7 +113,8 @@ body {
 }
 
 .jumbotron p {
-  color: #fff;
+  color: #000;
+  font-weight: 300;
   text-align: right;
 }
 
