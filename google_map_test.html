@@ -13,7 +13,7 @@
         // you can specify the default lat long
         var map,
             currentPositionMarker,
-            mapCenter = new google.maps.LatLng(14.668626, 121.24295),
+            mapCenter = new google.maps.LatLng(39.022421, -94.656573),
             map;
  
         // change the zoom if you want
@@ -67,10 +67,9 @@
         }
  
         function setMarkerPosition(marker, position) {
+            
             marker.setPosition(
-                new google.maps.LatLng(
-                    position.coords.latitude,
-                    position.coords.longitude)
+                new google.maps.LatLng(39.022421,-94.656573)
             );
         }
  
@@ -94,7 +93,7 @@
 <body style="margin:0; padding:0;">
      
     <!-- display the map here, you can changed the height or style -->
-    <div id="map_canvas" style="height:25em; width:160em; margin:0; padding:0;"></div>
+    <div id="map_canvas" style="height:25em; width:25em; margin:0; padding:0;"></div>
 </body>
  
 </html>

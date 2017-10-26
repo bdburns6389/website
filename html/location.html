@@ -24,10 +24,43 @@
         </ul>
       </div>
     </div>
-    
+    <h3>Flatlanders</h3>
+    <p><h5>6110 Johnson Dr, Mission, KS 66202</h5>
+    <p><h5>(913)831-2617</h5>
+      <style>
+        h5 {
+          text-align: center;
+        }
+      </style>
     <div id="player"></div>
       <script type="text/javascript" src="./player.js"></script>
-
+   <style>
+       #map {
+        margin: auto;
+        height: 400px;
+        width: 800px;
+        border: 3px black;
+        margin-top: 1cm;
+        
+       }
+    </style>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var flatlanders = {lat: 39.022421, lng: -94.656573};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: flatlanders
+        });
+        var marker = new google.maps.Marker({
+          position: flatlanders,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCG8SGz3w10sWRglzWn9wcs9LtWP2MS-xQ&callback=initMap">
+    </script>
     
     <div class="main">
       <div class="container">
