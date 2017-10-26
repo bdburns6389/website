@@ -12,7 +12,7 @@
         player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: 'tWKTcydQluA',
+          videoId: '2exrWj1HvkA',
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
@@ -38,3 +38,19 @@
       function stopVideo() {
         player.stopVideo();
       }
+    
+    
+    
+    
+    
+    //easter egg for konami code.
+    var egg = new Egg();
+    egg.addCode("up,up,down,down,left,right,left,right,b,a", function() {
+      jQuery('#egggif').fadeIn(500, function() {
+        window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
+      });
+    }, "konami-code");
+    egg.addHook(function(){
+      window.alert("hi");
+    });
+    egg.listen();
