@@ -2,7 +2,19 @@
 <html>
   <head>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="https://rawgit.com/mikeflynn/egg.js/9d4e0518cf9db87f634b36df5ad805ab957dcac3/egg.min.js"></script>
+    <script>var egg = new Egg();
+egg
+  .addCode("up,up,down,down", function() {
+    jQuery('#egggif').fadeIn(500, function() {
+      window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
+    });
+  })
+  .addHook(function(){
+    console.log("Hook called for: " + this.activeEgg.keys);
+    console.log(this.activeEgg.metadata);
+  }).listen();</script>
   </head>
   <body>
     <div class="header">
@@ -28,14 +40,13 @@
     </div>
     
    
-  <script type="text/javascript" src="https://rawgit.com/mikeflynn/egg.js/9d4e0518cf9db87f634b36df5ad805ab957dcac3/egg.min.js"></script>
-  <script type="text/javascript" src="js/player.js">
+  
     
   </script>
     
     <div class="main">
       <div class="container">
-        <img src="../images/flatlanders.jpg" height="196" width="196">
+        <img src="images/flatlanders.jpg" height="196" width="196">
         <h2>Founded in 1978</h2>
         <p>Independently owned and operated, Flatlander's is a rustic mountain gem located in the heart of the Midwest.
         <p>We offer a full array of quality products and services for your winter season needs. We pride ourselves on quality customer service and we stand behind our work 100%.
